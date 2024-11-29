@@ -236,3 +236,73 @@ body {
                   flex: 0 1 100px; /* Ensure each circle stays 100px wide */
                   height: 100px; /* Ensure the height stays consistent */
               }}    
+
+              /* testing */
+ .container {
+  display: flex;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns on larger screens */
+  gap: 10x; /* Space between cards */
+  width: 90%;
+  max-width: 800px;
+}
+
+.card {
+  overflow: hidden;
+  background-color: #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Styles for Card 2 */
+.card2 {
+    display: flex;
+    flex: 1; /* Make the card responsive */
+    padding: 15px;
+    background-color: #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Styles for Card 3 */
+.card3 {
+  flex: 1; /* Make the card responsive */
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  @media (max-width: 768px) {
+    .container {
+        flex-direction: grid; /* Stack cards vertically */
+        gap: 10px;
+    }
+  }
+
+  /* Card 2 (75% width on mobile) */
+  .card2 {
+      height: 15vh;
+      width: 190px;
+      grid-column: span 1;
+  }
+
+  /* Card 3 (25% width on mobile) */
+  .card3 {
+      height: 15vh;
+      width: 69%;
+      grid-column: span 1;
+      margin-left: 58px !important;
+  }
+}
+
+
+
+
+ 
+
+         
