@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <style>
+                      
+  </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="images/fd logo.jpeg" alt="Logo">
+        </div>
+        <div class="menu-items" id="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+    </div>
+
+    <!-- Banner Section -->
+    <div class="content">
+        <img src="" alt="" class="">
+        <div class="text-overlay">
+            <h1>EXPLORE FOODS</h1>
+        </div>
+    </div>
+    <!-- Circles Section -->
+    <div class="circle-group">
+        <div class="circle-grid">
+            <!-- Add 12 circles -->
+            <div class="circle"><img src="images/dish4.jpeg" alt="1"></div>
+            <div class="circle"><img src="images/dish5.jpeg" alt="2"></div>
+            <div class="circle"><img src="images/dish6.jpeg" alt="3"></div>
+            <div class="circle"><img src="images\dish9.jpeg" alt="4"></div>
+            <div class="circle"><img src="images/dish7.jpeg" alt="5"></div>
+            <div class="circle"><img src="images/dishes3.jpeg" alt="6"></div>
+            <div class="circle"><img src="images/dish7.jpeg" alt="7"></div>
+            <div class="circle"><img src="images/dish5.jpeg" alt="8"></div>
+            <div class="circle"><img src="images/dish6.jpeg" alt="9"></div>
+            <div class="circle"><img src="images/dish4.jpeg" alt="10"></div>
+            <div class="circle"><img src="images/dish6.jpeg" alt="11"></div>
+            <div class="circle"><img src="images/dish7.jpeg" alt="12"></div>
+            
+        </div>
+        </div>
+
+    <!-- Cards Section -->
+    <div class="cards-section">
+        <div class="card">
+            <img src="images/mango juice.jpeg" alt="Carrot">
+            <p>This is some content inside the card.</p>
+        </div>
+        <div class="card">
+            <img src="images/buttor.jpeg" alt="Butter">
+            <p>Butter is a dairy product made from the fat and protein components of churned cream. It is a semi-solid emulsion at room temperature.</p>
+        </div>
+    <div class="card">
+        <img src="images/buffo.jpeg" alt="buffo">
+        <p>This is some content inside the card.</p>
+    </div>
+<div class="card">
+    <img src="images/cake.jpeg" alt="cake">
+    <p>This is some content inside the card.</p>
+</div>
+<div class="card">
+    <img src="images/dsh.jpeg" alt="buffo">
+    <p>This is some content inside the card.</p>
+</div>
+<div class="card">
+    <img src="images/Strawberry.jpeg" alt="buffo">
+    <p>The garden strawberry is a widely grown hybrid species of the which are cultivated worldwide for their fruit. </p>
+</div>
+</div>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-circle"></div>
+        <div class="footer-circle"></div>
+        <div class="footer-circle"></div>
+    </div>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

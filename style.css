@@ -1,0 +1,238 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* Navbar Styles */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f4f4f4;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.logo img {
+    width: 40px;
+}
+.menu-items {
+    display: flex;
+    gap: 15px;
+}
+.menu-items a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Banner Section */
+.content {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background-image: url('images/header8.jpg'); /* Set your image as a background */
+    background-size: cover; /* Ensures the image covers the container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling of the image */
+}
+.text-overlay {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-overlay h1 {
+    color: rgb(245, 245, 240);
+    font-size: 35px;
+    text-align: center;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+/* Cards Section */
+.cards-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three cards per row */
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.card {
+     width: 90%; /* Default width on larger screens */
+    height: 100px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 300px;
+    text-align: center;
+}
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+/* Circles Section */
+.circle-group {
+  margin:30px 0 -42px 0px;
+  text-align: center;
+}
+.circle-grid {
+  display: flex; /* Use flexbox for a single row layout */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  gap: 15px; /* Space between circles */
+  justify-content: center; /* Center align the circles */
+  padding: 16px; /* Optional padding */
+}
+.circle {
+  flex: 0 1 100px; /* Make each circle 100px wide, adjust as needed */
+  height: 100px; /* Ensure the height stays consistent */
+} 
+.circle img {
+  width: 60%; /* Scale the image to fit within the circle */
+  height: 60%;
+  object-fit: cover; /* Maintain aspect ratio and crop excess */
+  border-radius: 50%; /* Ensures the image fully conforms to the circle */
+}
+
+/* Footer Section */
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(4, 4, 4);
+    padding: 20px;
+}
+.footer-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    margin: 0 5px;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    .hamburger {
+        display: block;
+    }
+    .menu-items.active {
+        display: flex;
+    }
+    .card {
+        width: 100%;  
+    }}
+
+@media (max-width: 768px) {
+  /* Hide extra icons after the 4th one */
+  .circle:nth-child(n+5) { 
+    display: none; /* Hides icons 5 and beyond */
+  }
+}
+/* For mobile screens, show the hamburger menu */
+@media (max-width: 768px) {
+  .menu-items {
+      display: none; /* Hide the menu items by default */
+      flex-direction: column; /* Stack menu items vertically */
+      gap: 10px;
+      width: 100%;
+  }
+}
+  .hamburger {
+      display: none;  /* Show the hamburger icon on small screens */
+  }
+  .menu-items.active {
+      display: flex; 
+  }
+  /* For devices larger than 1024px (desktops and laptops) */
+  @media screen and (min-width: 1024px) {
+    .content {
+      padding: 40px; /* Add more padding */
+    }
+  
+    .header div {
+      font-size: 1.5rem; /* Increase font size in the header */
+    }
+    .content {
+      height: 200px; /* Larger blocks */
+    }
+  
+    .circle-group {
+      gap: 20px; /* Add space between circles */
+      justify-content: center; /* Center circles */
+    }}
+/* For devices larger than 768px (tablets and laptops) */
+@media screen and (min-width: 768px) {
+  .content {
+    height: 150px; /* Increase height for larger screens */
+  }
+  .small-box {
+    height: 70px; /* Increase height for small blocks */
+    
+  }          
+  .footer-circle {
+    width: 40px;
+    height: 40px; /* Larger footer circles */
+  }
+    }
+    @media (max-width: 768px) {
+      .hamburger {
+          display: block; /* Show the hamburger icon on small screens */
+      }  }
+      @media (max-width: 768px) {
+          .cards-section {
+              display: flex;
+              flex-direction: column; /* Stack cards vertically */
+              gap: 10px; /* Space between cards */
+          }
+          .card {
+              width: 100%; /* Cards take full width */
+          }
+          /* Hide the third card on mobile */
+          .card:nth-child(n+4) {
+              display: none;
+          }}
+      @media (max-width: 768px) {
+          .content {
+              height: 200px; /* Smaller height for mobile devices */
+          }
+      
+          .text-overlay h1 {
+              font-size: 24px; /* Smaller text size for mobile devices */
+          }}
+      @media (min-width: 1024px) {
+          .content {
+              height: 400px; /* Larger height for desktops */
+          }}
+          @media (max-width: 768px) {
+              .circle-grid {
+                  display: grid;
+                  grid-template-columns: repeat(4, 1fr); /* Four circles per row */
+                  gap: 15px; /* Space between circles */
+              }
+              .circle {
+                  flex: 0 1 100px; /* Ensure each circle stays 100px wide */
+                  height: 100px; /* Ensure the height stays consistent */
+              }}    
